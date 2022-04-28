@@ -417,3 +417,7 @@
 547	x32	pwritev2		compat_sys_pwritev64v2
 # This is the end of the legacy x32 range.  Numbers 548 and above are
 # not special and are not to be used for x32-specific syscalls.
+
+548 64 add_user sys_add_user
+549 64 get_user sys_get_user
+550 64 del_user sys_del_user
