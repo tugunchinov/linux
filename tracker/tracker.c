@@ -58,6 +58,7 @@ tracker_init(void) {
 static void __exit
 tracker_exit(void) {
   del_timer(&timer);
+  tasklet_kill(&tracker_tasklet);
   free_irq(1, DEV_COOKIE);
 }
 
