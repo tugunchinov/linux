@@ -96,6 +96,7 @@
 #include <linux/time_namespace.h>
 #include <linux/resctrl.h>
 #include <linux/cn_proc.h>
+#include <linux/sched_count.h>
 #include <trace/events/oom.h>
 #include "internal.h"
 #include "fd.h"
@@ -3285,6 +3286,7 @@ static const struct pid_entry tgid_base_stuff[] = {
 #ifdef CONFIG_SECCOMP_CACHE_DEBUG
 	ONE("seccomp_cache", S_IRUSR, proc_pid_seccomp_cache),
 #endif
+    ONE("sched_count", S_IRUGO, proc_sched_count_show),
 };
 
 static int proc_tgid_base_readdir(struct file *file, struct dir_context *ctx)
